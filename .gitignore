@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+# files the tests write
+tests/*.tif
+tests/*.gpkg
+tests/*.json
+tests/*.png
+tests/*.npy
+*.zip

@@ -1,0 +1,17 @@
+[general]
+name=Benched Mining Tools
+qgisMinimumVersion=3.22
+description=Benched open pit and waste rock pile surfaces from a DEM and an outline polygon, with contour output.
+version=2.8.1
+author=Jeff
+email=
+about=Processing tools that modify a DEM to represent planned mining. "Generate Benched Open Pit" projects a benched pit downward from an outline at a rim elevation to a floor elevation. "Generate Benched Waste Rock Pile" builds a benched dump upward and inward from a maximum-footprint outline. Both work at 1 m resolution in a UTM CRS, report cut/fill volume, and can write contour lines (with an ELEVATION attribute) inside the footprint. Optional haul road design follows the Deswik open pit design guidelines. LICENSE: GPL-2.0-or-later. DISCLAIMER: provided without warranty and used entirely at your own risk; it is a planning aid, not engineered mine design, and all output must be reviewed by a qualified mining or geotechnical engineer.
+tracker=https://github.com/Miner-Jeff/benched-mining-tools/issues
+repository=https://github.com/Miner-Jeff/benched-mining-tools
+homepage=https://github.com/Miner-Jeff/benched-mining-tools
+category=Analysis
+icon=icon.svg
+hasProcessingProvider=yes
+experimental=True
+deprecated=False
+changelog=2.8.1 Repository links added. 2.8.0 Roads are built bottom up by default (spiral build order option; digitized roads default to ascending); road impact on volumes and floor/crest area is logged; spiral direction now describes loaded-truck climb. 2.7.0 Bench crest/toe strings traced at constant elevation from the finished surface (adjusted for the ramp); log notes where the road meets the lowest string for manual edits. 2.6.0 The modified DEM output is now optional and off by default; the tools focus on contours, bench lines and ramp designs. 2.5.2 Contact email removed from metadata. 2.5.1 GPL-2.0-or-later licence and use-at-your-own-risk disclaimer added. 2.5.0 Validation checks (warnings only): outline validity/overlap, inter-ramp and overall slope, face angle, last bench, floor size, contour interval, road self-intersection, overlap, connection, sight distance. 2.4.0 Automatic spiral haul road (pit and dump); new drawing outputs: bench crest/toe lines, road centreline+edge lines, road surface polygons. 2.3.0 Pit roads never add fill: the ramp is left as unexcavated rock and walls are cut back beside it; pit cut volume includes road effects. 2.2.0 Roads: flat landing at road start, minimum radius from truck turning circle, inside-edge gradient warning on two-way bends. 2.1.0 Haul road design in both tools: centreline-driven ramp with gradient, truck-width-based running width, curve widening and easing, crossfall, V-ditch, windrow, cut/fill tie-in, QA warnings; contours include the road. 2.0.1 Added USER_GUIDE.md and step-by-step input explanations in each tool help panel. 2.0.0 First packaged plugin release. Open pit and waste rock pile tools combined; footprint rasterized directly on the DEM grid; contours clipped to footprint; cut/fill volumes reported.

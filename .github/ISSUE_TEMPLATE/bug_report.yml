@@ -1,0 +1,45 @@
+name: Bug report
+description: Report a problem. Please read the note below first.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Please note:** this is a free, volunteer, experimental project provided without warranty (GPL-2.0-or-later). Reports are welcome, but **a response or a fix is not guaranteed**, and there is no timeline. Use the software at your own risk; results must be reviewed by a qualified engineer.
+  - type: input
+    id: version
+    attributes:
+      label: Plugin version
+      description: Shown in the first lines of the algorithm help and in the plugin manager.
+    validations: {required: true}
+  - type: input
+    id: qgis
+    attributes:
+      label: QGIS version and operating system
+      placeholder: "QGIS 3.40 on Windows 11"
+    validations: {required: true}
+  - type: dropdown
+    id: tool
+    attributes:
+      label: Which tool?
+      options: [Generate Benched Open Pit, Generate Benched Waste Rock Pile, Both or not sure]
+    validations: {required: true}
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations: {required: true}
+  - type: textarea
+    id: log
+    attributes:
+      label: Log output
+      description: Paste the full text of the Log tab from the Processing dialog (including any WARNING lines).
+      render: text
+  - type: textarea
+    id: inputs
+    attributes:
+      label: Inputs used
+      description: DEM source and CRS, outline CRS, bench height/width, angle or slope, elevations, road options.
+  - type: markdown
+    attributes:
+      value: "Please do not attach confidential data. Remove anything you are not free to share."
